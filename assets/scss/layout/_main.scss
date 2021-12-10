@@ -1,6 +1,7 @@
 .header{
     padding: 40px 10px;
-    background: url('../../../assets/images/pattern-bg.png') no-repeat;
+    background-image: url('../../../assets/images/pattern-bg.png');
+    background-repeat: no-repeat;
     background-size: cover;
     height: 30%;
     @media screen and (max-width: 768px) {
