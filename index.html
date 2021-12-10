@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS for leaflet map -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+    integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+    crossorigin=""/>
+    <!-- JavaScript for leaflet map -->
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+    integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+    crossorigin=""></script>
+    <title>IP Address Tracker</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <div class="wrapper d-flex flex-column overflow-hidden w-100 h-100 position-relative">
+        <header class="header d-flex flex-column align-items-center">
+            <h1 class="text-white main-heading">IP Address Tracker</h1>
+            <form id="form">
+                <div class="input d-flex align-items-center">
+                    <input type="text" name="ip-domain" id="ip_domain" placeholder="Search for any IP address or domain" autocomplete="off">
+                    <button class="btn btn-primary" id="getLocation"><img src="assets/images/icon-arrow.svg" alt=""></button>
+                </div>
+            </form>
+        </header>
+        <div class="float bg-white mx-auto">
+            <div class="ip px-xl-5 px-lg-4 px-md-3 my-1 my-md-4">
+                <p class="mb-0 text-uppercase text-secondary">ip address</p>
+                <h4 class="mb-0 text-capitalize ipaddress-text">--</h4>
+            </div>
+            <div class="location px-xl-5 px-lg-4 px-md-3 my-1 my-md-4">
+                <p class="mb-0 text-uppercase text-secondary">location</p>
+                <h4 class="mb-0 text-capitalize location-text">--</h4>
+            </div>
+            <div class="timezone px-xl-5 px-lg-4 px-md-3 my-1 my-md-4">
+                <p class="mb-0 text-uppercase text-secondary">timezone</p>
+                <h4 class="mb-0 text-capitalize timezone-text">--</h4>
+            </div>
+            <div class="isp px-xl-5 px-lg-4 px-md-3 my-1 my-md-4">
+                <p class="mb-0 text-uppercase text-secondary">isp</p>
+                <h4 class="mb-0 text-capitalize isp-text">--</h4>
+            </div>
+        </div>
+        <div id="map"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
